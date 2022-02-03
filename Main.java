@@ -6,17 +6,19 @@ import java.io.IOException;
 
 public class Main {
 
+    public static String prefix = "d:" + File.separator + "Games" + File.separator;
+
     public static void main(String[] args) {
 
-        File dir1 = new File("D://Games//src");
-        File dir2 = new File("D://Games//res");
-        File dir3 = new File("D://Games//savegames");
-        File dir4 = new File("D://Games//temp");
-        File dir5 = new File("D://Games//src//main");
-        File dir6 = new File("D://Games//src//test");
-        File dir7 = new File("D://Games//res//drawables");
-        File dir8 = new File("D://Games//res//vectors");
-        File dir9 = new File("D://Games//res//icons");
+        File dir1 = new File(prefix + "src");
+        File dir2 = new File(prefix + "res");
+        File dir3 = new File(prefix + "savegames");
+        File dir4 = new File(prefix + "temp");
+        File dir5 = new File(prefix + "main");
+        File dir6 = new File(prefix + "test");
+        File dir7 = new File(prefix + "drawables");
+        File dir8 = new File(prefix + "vectors");
+        File dir9 = new File(prefix + "icons");
 
         StringBuilder report = new StringBuilder();
 
@@ -41,6 +43,8 @@ public class Main {
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
+
+        System.out.println(report);
     }
 }
 
